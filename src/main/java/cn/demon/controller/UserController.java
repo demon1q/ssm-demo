@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
 
 /**
  * @desciption: 用户控制器
@@ -26,13 +25,13 @@ public class UserController {
     }
 
     /**
-     * @param username
-     * @param password
-     * @param model
-     * @return
+     * 登录
+     * @param username 用户名
+     * @param password 密码
+     * @param model 模型
      */
     @RequestMapping(value = "/login")
-    public String login(@RequestParam String username, @RequestParam String password, Model model) {
+    public String login(@RequestParam() String username, @RequestParam() String password, Model model) {
         User user = userService.login(username);
         if (user == null) {
             model.addAttribute("message", "用户不存在");

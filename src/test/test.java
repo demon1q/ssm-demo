@@ -20,9 +20,14 @@ public class test {
     private UserMapper userMapper;
     @Test
     public void select(){
-        User user = userMapper.selectByName("111");
+        User user = userMapper.selectByName("张强");
 //        UserService userService = new UserServiceImpl();
 //        User user = userService.login("admin");
         System.out.println(user);
+    }
+
+    @Test
+    public void show(){
+        System.out.println("在");
     }
 }

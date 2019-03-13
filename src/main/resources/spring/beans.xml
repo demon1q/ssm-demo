@@ -28,7 +28,7 @@
         <property name="mapperLocations" value="classpath:cn/demon/dao/*.xml"/>
         <!--<property name="mapperLocations" value="mapper/*.xml"/>-->
         <!--也可以引入mybatis配置文件 -->
-        <!--<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"/>-->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
     </bean>
 
     <!-- 使用mybatis的接口代理开发模式(必须保证接口和对应的mybatis的xml名称相同，且在一个文件夹内) -->
